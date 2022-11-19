@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dark Wear</title>
+
+  <link rel="icon" type="image/x-icon" href="/images/">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/0524a46759.js" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-firestore.js"></script>
+
+  <script>
+    // Import the functions you need from the SDKs you need
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyA3Pl7Gfxp_UuHm0vFKMKOhg27AZCf037I",
+      authDomain: "quickstart-1615401631495.firebaseapp.com",
+      projectId: "quickstart-1615401631495",
+      storageBucket: "quickstart-1615401631495.appspot.com",
+      messagingSenderId: "701972029583",
+      appId: "1:701972029583:web:fa3b0c3f8d7f928c3110fa",
+      measurementId: "G-G2FE0985WF"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+  <script src="https://kit.fontawesome.com/0524a46759.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/Style/style.css">
+  <script src="./db.js"></script>
+
+
+</head>
+
+<body style="background-color: #e8ecf2;">
+
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a style="font-family: Market_Decox;" class="navbar-brand" href="./index.html">DARK</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              jewleryDropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Rings</a></li>
+              <li><a class="dropdown-item" href="#">WristBands</a></li>
+              <li><a class="dropdown-item" href="#">EarRings</a></li>
+              <li><a class="dropdown-item" href="#">Neclace</a></li>
+              <li><a class="dropdown-item" href="#">Piercing</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Filter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              clothesDropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./Clothes.html">Jackets </a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">Hoodies</a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">Pants</a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">Shoes</a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">Beanies</a></li>
+              <li><a class="dropdown-item" href="./Clothes.html">Gloves</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Filter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/username.html ">
+              logInnPage
+            </a>
+          </li>
+        </ul>
+        <button id="shoppingcart" class="theShoppingCart btn btn-dark" onclick="sSC()">Shopping Cart</button>
+        <form class="d-flex">
+          <input class=" form-control me-2" type="search" placeholder="&lt;Search&gt;" aria-label="Search">
+          <button class="btn search_button " type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--Page-->
+  <div class="mainPage">
+    <div class="rowItem row row-cols-3 align-self-center">
+
+      <div id="jewlery" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a> </div>
+
+      <div id="jewlery" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a></div>
+
+      <div id="jewlery" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+          <button class="addToCartbtn btn btn-dark" onclick="">Add to Cart</button>
+        </a></div>
+
+
+
+      <div id="pants" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a></div>
+
+      <div id="pants" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a> </div>
+
+      <div id="pants" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a></div>
+
+
+
+      <div id="hoodies" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a></div>
+
+      <div id="hoodies" class="mI col shopItem"><a href="./productCloseup.html"><br>
+          <div class="itemImg rounded"><img class="mIImg" src="/images/OBJ.jpg" alt=""></div><br>
+          <div class="mITxt">Item Text</div><br>
+          <div class="mIDesc">Item Description</div><br>
+        </a></div>
+
+    </div>
+  </div>
+  <footer>
+    <div class="footer">
+       <h5>Org nr: 2345 2312 8644</h5>
+       <h5><a href="https://www.helsenorge.no/en/psykisk-helse">The support we need</a></h5>
+       <h5><a href="mailto:westgaard04@gmail.com" target="_blank" class="fas fa-envelope footericons fa-2x"></a></h5>
+       <h5>Telf: 976 98 216</h5> 
+    </div>
+  </footer>
+</body>
+</html>

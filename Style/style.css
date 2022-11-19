@@ -1,0 +1,209 @@
+@import url(../Market_Deco.ttf);
+@font-face {
+    font-family:Marked_Deco;
+    src: url(../Market_Deco.ttf);
+}
+body{
+    color: black;
+}
+
+.navbar{
+    background-color: #1a1a1a;
+    color: #bdbdbd;
+    
+}
+.mainPage{
+    background-color: #353535;
+    color: rgb(248, 247, 245);
+    height: max-content;
+    width:100%;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.navbar{
+    color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.rowItem{
+    width: 100%;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+}
+
+.mI{
+    margin-bottom: 5%;
+    width: 22%;
+    margin: 2%;
+}
+
+.mIImg{
+    width: 100%;
+}
+
+.itemImg{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+}
+
+.mIDesc{
+    text-align: center;
+}
+
+.mITxt{
+    text-align: center;
+}
+
+
+
+.search_button{
+    background-color: #e8ecf2;
+    color: #353535;
+    height: 50px;
+    width: 175px;
+    transition: all;
+    transition-duration: 250ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+   
+}
+
+.search_button :hover{
+    background-color: #353535;
+    color: #e8ecf2;
+    transition-duration: 50ms
+}
+
+.LogInnBody{ 
+    margin: 0; 
+    padding: 0; 
+    background: #393939; 
+  }
+  .box{ 
+    width: 300px; 
+    padding: 40px; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%); 
+    background: #191919; 
+    text-align: center; 
+    border-radius: 10px; 
+    user-select: none; 
+  } 
+  .box h1{ 
+    color: white; 
+    text-transform: uppercase; 
+  } 
+  .box h1:hover{color:#4b4b4b} 
+  .box input[type = "text"], .box input[type = "password"]{ 
+    border:0; 
+    background: none; 
+    display: block; 
+    margin: 20px auto; 
+    text-align: center; 
+    border: 2px solid #687177; 
+    padding: 15px 1px; 
+    width: 200px; 
+    outline: none; 
+    color: #dfdfdf; 
+    border-radius: 5px; 
+  } 
+  .box input[type = "submit"]{
+    border: 2px solid #687177;
+    background: none;
+    color: #bdbdbd;
+    width: 200px;
+    margin: 20px auto;
+    padding: 15px 1px;
+    border-radius: 5px;
+
+  }
+
+  .box input[type = "submit"]:hover{ 
+    background: #4b4b4b; 
+    color: white 
+  }
+
+
+.body2{
+    background-color: #191919;
+    margin-left: 130px;
+    margin-top: 80px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    box-shadow: 0px 0px 70px #353535;   
+}
+
+.shopItem{
+    background-color: #111111;
+    color: #687177;
+}
+
+.rowItem{
+    align-items:center;
+    position:relative;
+
+}
+
+#footer{
+    margin-top: 100%;
+    padding-left: 43.6678%;
+    padding-right: 43.6678%;
+    position: absolute;
+    margin-top: 5%;
+    text-align: center;
+    background-color: #1f2833;
+    bottom: 0;
+}
+.footericons{
+    padding: 20px 10px;
+}
+
+.productimg{
+    margin: 2%;
+    width: 25%;
+}
+
+.addToCart{
+    margin-left: 2%;
+}
+
+.productText{
+    margin-left: 2%;
+}
+
+.footer{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    background-color: #111111;
+    text-align: center;
+    color: #bdbdbd;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+.addToCartbtn{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theShoppingCart{
+    margin-right: 15px;
+}
+
